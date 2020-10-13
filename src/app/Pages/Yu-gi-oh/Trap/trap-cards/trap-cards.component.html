@@ -1,0 +1,47 @@
+<div *ngIf="info!= null" >
+  <mat-form-field class="ex" *ngIf="filteredOptions">
+    <input type="text"
+           placeholder="Nome da Carta"
+           [(ngModel)]="procure" name="search"
+           aria-label="Number"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto"
+           (ngModelChange)="nulo()">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <button mat-fab color="primary"  *ngIf="filteredOptions" (click)="nameSearch()"><mat-icon>search</mat-icon></button>
+
+
+  <div *ngIf=" cards.length>0">
+    <mat-paginator
+      (page)="onPageChange($event)"
+      [length]="cards.length"
+      [pageSize]="5"
+      [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+    <div *ngIf="achado == false">
+    <div class="bo" *ngFor="let c of currentItemsToShow let i=index;"  >
+      <mat-card>
+        <img mat-card-image src="{{c.img}}" alt="{{c.name}}">
+        <button mat-raised-button class="info" (click)="openDialog(c)">Informações</button>
+      </mat-card>
+    </div>
+    </div>
+    <div *ngIf="achado == true">
+
+      <div class="busq"  >
+        <mat-card>
+          <img mat-card-image src="{{buscado.img}}" alt="{{buscado.name}}">
+          <button mat-raised-button class="info" (click)="openDialog(buscado)">Informações</button>
+        </mat-card>
+      </div>
+
+    </div>
+  </div>
+
+</div>

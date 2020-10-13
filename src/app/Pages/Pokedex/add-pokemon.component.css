@@ -1,0 +1,35 @@
+
+.bo{
+
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.esp{
+  margin-left: 80px;
+  margin-right: 80px;
+}
+mat-card-title{
+text-align: center;
+}
+button{
+  background-color: cyan;
+}
+
+.example-card{
+  text-align: center;
+  position: relative;
+  width: 200px;
+  height: 300px;
+}
+img{
+  width: 30%;
+}
+.example-card img{
+  background-color: #ddd;
+  border-radius: 100%;
+  height: 150px;
+  object-fit: none;
+  width: 150px;
+}
+

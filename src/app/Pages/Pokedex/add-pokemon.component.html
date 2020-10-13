@@ -1,0 +1,19 @@
+<div  fxLayoutAlign="space-around center" >
+  <h1>Pokedex</h1>
+</div>
+<div class="esp">
+<div class="bo" *ngFor="let c of pokedex" >
+  <mat-card class="example-card" >
+  <mat-card-header>
+    <mat-card-title>{{c.name}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{c.img}}" alt="Pokemon">
+  <mat-card-content>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="detaisPokemon(c)">Mais informações</button>
+  </mat-card-actions>
+</mat-card>
+</div>
+</div>

@@ -1,0 +1,41 @@
+<h1><b>{{card.name_en}}</b>/<b>{{card.name}}</b></h1>
+
+  <div class="as">
+    <div  class="os">
+    <mat-carousel
+  timings="250ms ease-in"
+  [autoplay]="true"
+  interval="3000"
+  color="accent"
+  maxWidth="300px"
+  slideHeight="10%"
+  proportion="150"
+  [loop]="true"
+  slides="{{card.img.length}}"
+  [hideArrows]="true"
+  [hideIndicators]="false"
+  [useKeyboard]="true"
+  [useMouseWheel]="false"
+  orientation="ltr"
+>
+  <mat-carousel-slide
+    #matCarouselSlide
+    *ngFor="let slide of card.img; let i = index"
+    [image]="slide.image_url"
+    [hideOverlay]="false"
+  ></mat-carousel-slide>
+</mat-carousel>
+    </div>
+
+<div class="pp">
+  <p>Atributo: <b>{{card.attribute}}</b></p>
+  <p> Monstro: <b>{{card.type}}</b></p>
+  <p>Classe: <b>{{card.race}}</b></p>
+  <p>Level: <b>{{card.level}}</b></p>
+  <p>ATK:<b>{{card.atk}}</b> | DEF:<b>{{card.def}}</b></p>
+  <p>{{card.desc}}</p>
+
+
+</div>
+
+  </div>

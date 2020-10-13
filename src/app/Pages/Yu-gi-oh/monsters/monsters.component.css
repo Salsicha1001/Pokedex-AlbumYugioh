@@ -1,0 +1,37 @@
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+
+mat-form-field{
+  padding: 15px;
+
+}
+mat-card {
+  max-width: 240px;
+}
+
+.info{
+  margin-left: 27%;
+  background-color: #ffc045;
+}
+.bo{
+
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.example-full-width{
+  width: 250px;
+}
+mat-progress-spinner{
+  margin-left: 45%;
+  margin-top: 10%;
+}
+.busq{
+  margin-left: 40%;
+}
+.ex{
+  margin-left: 45%;
+}

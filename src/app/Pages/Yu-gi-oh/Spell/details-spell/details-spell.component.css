@@ -1,0 +1,27 @@
+img{
+  width: 50%;
+}
+.bod{
+  float: left;
+  margin-left: 35%;
+  position: relative;
+  margin-top: -40%;
+
+
+}
+
+.ptitle{
+  display: inline-block;
+
+}
+.ims{
+  float: left;
+  width: 50%;
+}
+.externo{
+  display: table;
+  border-style: solid;
+}
+#ttsw{
+  margin-left: 10px;
+}

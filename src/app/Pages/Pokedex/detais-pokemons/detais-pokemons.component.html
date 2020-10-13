@@ -1,0 +1,30 @@
+<div>
+  <h3>Detalhes</h3>
+</div>
+
+<div>
+
+<mat-card class="example-card" >
+  <mat-card-header>
+    <mat-card-title>{{pokemon.name}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image class="imgPri" src="{{pokemon.img}}" alt="Pokemon">
+  <mat-card-content>
+    <div class="types">
+    <br>
+    <p>Tipo</p>
+<span>{{name1}} / {{name2}}</span>
+    <br>
+<img  class="iconType" src="{{type1}}" >
+    <img class="iconType" src="{{type2}}">
+    </div>
+    <div class="titlefa">
+      Fraquezas
+      <div *ngFor="let c of fraqueza">
+        <span>{{c.name}}</span>
+        <img class="iconType"src="{{c.img}}" >
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+</div>

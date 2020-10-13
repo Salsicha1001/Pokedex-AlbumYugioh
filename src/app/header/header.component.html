@@ -1,0 +1,41 @@
+<p>
+  <mat-toolbar *ngIf="(Authenticated$|async)">
+    <span class="titlelog" >BANK</span>
+    <ng-container *ngIf="(Authenticated$ |async)">
+      <button mat-button routerLink="/auth/login"  class="bt1"><mat-icon>input</mat-icon>Login</button>
+      <button mat-button routerLink="/auth/register"><mat-icon>person_add</mat-icon>Criar conta</button>
+    </ng-container>
+  </mat-toolbar>
+
+  <mat-toolbar *ngIf="!(Authenticated$|async)">
+
+    <span>BankSucess</span>
+    <button mat-button routerLink="/pokedex">Pokemons</button>
+    <button mat-button [matMenuTriggerFor]="animals">Yu-gi-oh</button>
+    <mat-menu #animals="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="spell">Cartas de Magia</button>
+      <button mat-menu-item routerLink="/monsterCard" >Monstros</button>
+      <button mat-menu-item routerLink="/trapCard">Cartas Armadilha</button>
+
+    </mat-menu>
+    <mat-menu #spell="matMenu">
+      <button mat-menu-item routerLink="/spellCardNormal">Magia normal</button>
+      <button mat-menu-item routerLink="/spellCardQuick">Magia rápida</button>
+      <button mat-menu-item routerLink="/spellCardContinuoes" >Magia contínua </button>
+      <button mat-menu-item routerLink="/spellCardEquipament">Magia equipamento</button>
+      <button mat-menu-item routerLink="/spellCardRitual">Magia Ritual</button>
+      <button mat-menu-item routerLink="/spellCardCampo">Magia Campo</button>
+    </mat-menu>
+
+    <ng-container *ngIf="!(Authenticated$|async)">
+      <div id="buu">
+        <button mat-icon-button routerLink="/"><mat-icon>home</mat-icon></button>
+
+        <button mat-icon-button (click)="logout()"><mat-icon>exit_to_app</mat-icon></button>
+      </div>
+    </ng-container>
+
+  </mat-toolbar>
+
+
+</p>

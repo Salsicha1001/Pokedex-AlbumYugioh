@@ -1,0 +1,39 @@
+
+<div fxLayoutAlign="space-around center">
+  <h1>Cards de Magia Ritual</h1>
+
+</div>
+<div class="pesq">
+  <mat-form-field class="example-full-width">
+    <mat-label>Bucar Card de Magia</mat-label>
+    <input matInput placeholder="Ex. Sobrecarga" [(ngModel)]="search" name="search"
+           [formControl]="myControl"
+           [matAutocomplete]="auto"
+           (ngModelChange)="nulo()">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <button mat-raised-button (click)="busca()">Buscar</button>
+</div>
+<mat-progress-spinner *ngIf="loading" mode="indeterminate"></mat-progress-spinner>
+<div *ngIf="procure == false && loading== false">
+
+  <div class="bo" *ngFor="let c of spellRitual" >
+    <mat-card>
+      <img mat-card-image src="{{c.img}}" alt="{{c.name}}">
+      <button mat-raised-button class="info" (click)="openDialog(c)">Informações</button>
+    </mat-card>
+  </div>
+</div>
+<div *ngIf="procure == true && loading== false">
+
+  <div class="busq"  >
+    <mat-card>
+      <img mat-card-image src="{{buscado.img}}" alt="{{buscado.name}}">
+      <button mat-raised-button class="info" (click)="openDialog(buscado)">Informações</button>
+    </mat-card>
+  </div>
+</div>
