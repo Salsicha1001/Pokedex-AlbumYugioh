@@ -26,7 +26,6 @@ import {MatCarouselModule} from "@ngbmodule/material-carousel";
 import { TrapCardsComponent } from './Pages/Yu-gi-oh/Trap/trap-cards/trap-cards.component';
 import {SearchTrapComponent} from "./Pages/Yu-gi-oh/Trap/search-trap/search-trap.component";
 import { DetaisTrapComponent } from './Pages/Yu-gi-oh/Trap/CardsDetais/detais-trap/detais-trap.component';
-import { YugiohSortComponent } from './Pages/Yu-gi-oh/Sorte/yugioh-sort/yugioh-sort.component';
 
 
 @NgModule({
@@ -49,7 +48,6 @@ import { YugiohSortComponent } from './Pages/Yu-gi-oh/Sorte/yugioh-sort/yugioh-s
     SearchTrapComponent,
     TrapCardsComponent,
     DetaisTrapComponent,
-    YugiohSortComponent,
 
   ],
   imports: [
